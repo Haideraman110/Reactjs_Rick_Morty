@@ -1,5 +1,13 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
 body {
-  margin: 0;
+ 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +19,95 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  font-family: "Ysabeau SC", sans-serif;
+
+}
+.card{
+  height: auto;
+  font-size: 1.4rem;
+  font-family: "Ysabeau SC", sans-serif;
+}
+.cardcont{
+  background:linear-gradient(to right,#ee0979,#ff6a00);
+  width: 100%;
+}
+.cont{
+  background:linear-gradient(to right,#200122,#6f0000);
+  padding:1rem;
+  border-radius: .5rem;
+  width: 100%;
+}
+/* RightTop Container */
+.conttop{
+  background:linear-gradient(to right,#200122,#6f0000);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-bottom: 1rem;
+  margin-top:1rem ;
+  padding:2rem;
+  border-radius: .5rem;
+  color: white;
+
+}
+p{
+  color: orange;
+}
+img{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+input{
+  margin-bottom: 1rem;
+}
+.imgcontbg{
+  background-color: #070F2B;
+  padding:0.5rem;
+ 
+}
+.imgcontbg p{
+  color: white;
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+
+/* filter Checkboxes */
+.checkboxs{
+  background:linear-gradient(to bottom,#200122,#200122);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-top: 2rem;
+  color: white;
+}
+.checkboxs label{
+  font-size: 1.2rem;
+}
+
+/* filter bgicon */
+.bg{
+  margin-bottom: 1rem;
+}
+.bgfiltericon{
+  background-color: #ee0979;
+  padding:.5rem;
+  border-radius: .4rem;
+  font-size: 1.2rem;
+  margin-left: .4rem;
+}
+
+.plusicon{
+  display: none;
+}
+
+@media  only screen and (max-width:600px) {
+  .plusicon{
+    display: block;
+    color:#200122 ;
+    font-size: 1.6rem;
+  }
+}
+
