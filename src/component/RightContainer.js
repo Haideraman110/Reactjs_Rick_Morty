@@ -4,7 +4,12 @@ import SearchFilter from './SearchFilter'
 import SortFilter from './SortFilter'
 import CardContainer from './CardContainer'
 
-const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit, handleSort, gend, datas, setFilterdata }) => {
+const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit, handleSort, gend, datas, reset, setFilterdata, setRest }) => {
+
+    const handleReset = () => {
+        setFilterdata(datas)
+        setRest(prev => !prev)
+    }
     return (
         <>
             <RightTopContainer>
@@ -14,13 +19,13 @@ const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit,
                             <h1>Selected Filter</h1>
                             <div className='bg'>
                                 {
-                                    speciess ? (<span className='bgfiltericon'>{speciess} <i class="fa-solid fa-x" onClick={() => setFilterdata(datas)}></i></span>) : ''
+                                    reset ? speciess ? (<span className='bgfiltericon'>{speciess} <i class="fa-solid fa-x" onClick={handleReset}></i></span>) : '' : ''
                                 }
                                 {
-                                    gend ? (<span className='bgfiltericon'>{gend} <i class="fa-solid fa-x" onClick={() => setFilterdata(datas)}></i></span>) : ''
+                                    reset ? gend ? (<span className='bgfiltericon'>{gend} <i class="fa-solid fa-x" onClick={handleReset}></i></span>) : '' : ''
                                 }
                                 {
-                                    ori ? (<span className='bgfiltericon'>{ori} <i class="fa-solid fa-x" onClick={() => setFilterdata(datas)}></i></span>) : ''
+                                    reset ? ori ? (<span className='bgfiltericon'>{ori} <i class="fa-solid fa-x" onClick={handleReset}></i></span>) : '' : ''
                                 }
 
                             </div>

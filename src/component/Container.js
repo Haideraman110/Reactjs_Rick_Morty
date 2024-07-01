@@ -14,6 +14,7 @@ const Container = () => {
     const [gend, setGends] = useState('')
     const [ori, setOri] = useState('')
     const [toggle, setToggle] = useState(false)
+    const [reset,setRest]=useState(true)
 
     //inputfield search name
     const handleChange = (e) => {
@@ -90,7 +91,7 @@ const Container = () => {
                     </div>
                     <div className='col-12 col-md-10'>
                         {
-                            toggle ? <h1>Display None</h1> : <RightContainer datas={datas} setFilterdata={setFilterdata} speciess={speciess} ori={ori} gend={gend} filterdata={filterdata} handleChange={handleChange} handleSubmit={handleSubmit} handleSort={handleSort} />
+                            toggle ? <h1>Display None</h1> : <RightContainer datas={datas} reset={reset} setRest={setRest} setFilterdata={setFilterdata} speciess={speciess} ori={ori} gend={gend} filterdata={filterdata} handleChange={handleChange} handleSubmit={handleSubmit} handleSort={handleSort} />
                         }
 
                     </div>
