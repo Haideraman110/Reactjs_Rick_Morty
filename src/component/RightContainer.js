@@ -18,6 +18,7 @@ const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit,
                         <div className='col-12 col-md-6'>
                             <h1>Selected Filter</h1>
                             <div className='bg'>
+                                <hr/>
                                 {
                                     reset ? speciess ? (<span className='bgfiltericon'>{speciess} <i class="fa-solid fa-x" onClick={handleReset}></i></span>) : '' : ''
                                 }
@@ -34,6 +35,10 @@ const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit,
                         </div>
                         <div className='col-12 col-md-6'>
                             <h1>Sort Filter</h1>
+                            <div className='bg'>
+                                <hr/>
+                                 
+                            </div>
                             <SortFilter handleSort={handleSort} />
                         </div>
                     </div>
