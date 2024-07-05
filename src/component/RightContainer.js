@@ -4,7 +4,7 @@ import SearchFilter from './SearchFilter'
 import SortFilter from './SortFilter'
 import CardContainer from './CardContainer'
 
-const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit, handleSort, gend, datas, reset, setFilterdata, setRest }) => {
+const RightContainer = ({ speciess, ori, filterdata, handleChange, handleSubmit, handleSort, gend, datas, reset, setFilterdata, setRest}) => {
 
     const handleReset = () => {
         setFilterdata(datas)

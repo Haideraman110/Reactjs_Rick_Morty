@@ -38,34 +38,34 @@ const Container = () => {
     }
 
     // Species
-    const species = [...new Set(filterdata.map(val => val.species))]    //collecting the unquie species
+    const species = [...new Set(datas.map(val => val.species))]    //collecting the unquie species
     console.log(species)
 
     //handleSpecies
     const handleSpecies = (e) => {
         setSpeciess(e.target.value)
-        setFilterdata([...filterdata].filter((spec) => spec.species === e.target.value))
+        setFilterdata([...datas].filter((spec) => spec.species === e.target.value))
 
     }
 
     //gender
-    const genders = [...new Set(filterdata.map((gen) => gen.gender))]
+    const genders = [...new Set(datas.map((gen) => gen.gender))]
     console.log(genders)
 
     //handleGender
     const handleGender = (e) => {
         setGends(e.target.value)
-        setFilterdata([...filterdata].filter((gen) => gen.gender === e.target.value))
+        setFilterdata([...datas].filter((gen) => gen.gender === e.target.value))
 
     }
 
     //origin
-    const origins = [...new Set(filterdata.map((orig) => orig.origin.name))]
+    const origins = [...new Set(datas.map((orig) => orig.origin.name))]
     console.log(origins)
 
     const handleOrigin = (e) => {
         setOri(e.target.value)
-        setFilterdata([...filterdata].filter((orig) => orig.origin.name === e.target.value))
+        setFilterdata([...datas].filter((orig) => orig.origin.name === e.target.value))
 
     }
 
@@ -91,7 +91,7 @@ const Container = () => {
                     </div>
                     <div className='col-12 col-md-10'>
                         {
-                            toggle ? <h1>Display None</h1> : <RightContainer datas={datas} reset={reset} setRest={setRest} setFilterdata={setFilterdata} speciess={speciess} ori={ori} gend={gend} filterdata={filterdata} handleChange={handleChange} handleSubmit={handleSubmit} handleSort={handleSort} />
+                            toggle ? <h1>Display None</h1> : <RightContainer datas={datas} reset={reset} setRest={setRest} setFilterdata={setFilterdata} speciess={speciess} ori={ori} gend={gend} filterdata={filterdata} handleChange={handleChange} handleSubmit={handleSubmit} handleSort={handleSort}/>
                         }
 
                     </div>
